@@ -33,7 +33,6 @@ public class CalculatorTest {
         Calculator sut = new Calculator();
         int sum = sut.add(a,b);
         Assert.assertEquals(expectedResult,sum);
-
     }
 
     @Test
@@ -78,11 +77,9 @@ public class CalculatorTest {
         Assert.assertTrue(result < 0);
     }
 
-
     @Test(expected = ArithmeticException.class)
     public void shouldThrowExceptionWhenDividingByZero() {
         Calculator sut = new Calculator();
         sut.divide(10,0);
     }
-
 }
